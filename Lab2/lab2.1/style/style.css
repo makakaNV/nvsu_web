@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+}
+
+
+.logo img {
+  position: static;
+  height: 40px;
+}
+
+
+p {
+  font-size: 17px;
+}
+
+.facePhoto img{
+  width: 200px;
+  height: auto;
+  border-radius: 15px;
+  padding-bottom: 8px;
+}
+
+.nvsuPhoto {
+  float: right; 
+  width: 400px;
+  margin-top: 10px; 
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.nvsuPhoto img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  padding-bottom: 8px;
+}
+figcaption {
+  font-style: italic;
+  text-align: center;
+}
+
+main {
+  padding-top: 30px;
+  margin: 20px;
+}
+
+section h2 {
+  margin-top: 22px;
+  margin-bottom: 9px;
+  font-size: 24px;
+}
+
+section p {
+  margin-bottom: 3px;
+  line-height: 1.5;
+}
+
+section {
+  display: none;
+  padding: 20px 0;
+}
+
+section.active {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+table {
+  width: 65%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 2px solid black;
+  padding: 18px;
+  text-align: center;
+}
+
+.table1{
+  margin: 10px auto;
+}
+
+
+.table1 td:nth-child(1) {
+  border-left: 3px solid black; 
+}
+
+
+.table2{
+  margin: 50px auto;
+  width: 550px;
+  height: 550px;
+}
+
+.bgcolor1 {
+  background-color: #01ffcd;
+}
+
+.bgcolor2 {
+  background-color: #ffffcb;
+}
+
+.bgcolor3 {
+  background-color: #fe0000;
+}
+
+.bgcolor4 {
+  background-color: #0000fe;
+}
+
+.bgcolor5 {
+  background-color: #00ff00;
+}
+
+.bgcolor6 {
+  background-color: #feff00;
+}
+
+
+#forms h1 { 
+  margin-bottom: 20px;
+}
+
+.form1 {
+  display: flex;
+  justify-content: center;
+}
+
+#forms h2 { 
+  margin-top: 20px;
+}
+
+
