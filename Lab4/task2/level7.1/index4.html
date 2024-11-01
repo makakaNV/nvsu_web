@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Номер 7.4</title>
+</head>
+<body>
+    <input type="date" id="birthdateInput">
+    <button onclick="addDate()">Добавить</button>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Дата рождения</th>
+                <th>День недели</th>
+            </tr>
+        </thead>
+        <tbody id="dateTable">
+
+        </tbody>
+    </table>
+
+    <script>
+        function addDate() {
+            const input = document.getElementById('birthdateInput');
+            const dateValue = input.value;
+
+            if (!dateValue) {
+                alert("введите дату");
+                return;
+            }
+
+            const date = new Date(dateValue);
+            const options = { weekday: 'long' };
+            const dayOfWeek = date.toLocaleDateString('ru-RU', options);
+
+            const table = document.getElementById('dateTable');
+            const row = document.createElement('tr');
+
+            const dateCell = document.createElement('td');
+            dateCell.textContent = dateValue;
+            row.appendChild(dateCell);
+
+            const dayCell = document.createElement('td');
+            dayCell.textContent = dayOfWeek;
+            row.appendChild(dayCell);
+
+            table.appendChild(row);
+
+            input.value = '';
+        }
+    </script>
+</body>
+</html>

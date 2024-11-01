@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Номер 6.4</title>
+</head>
+<body>
+    <ul id="list"></ul>
+    <button id="addButton">Добавить пункт</button>
+
+    <script>
+        const button = document.getElementById('addButton');
+        const list = document.getElementById('list');
+
+        let counter = 1;
+
+        button.addEventListener('click', function() {
+            listItem = document.createElement('li');
+            listItem.textContent = "Пункт " + counter;
+            list.appendChild(listItem);
+            
+            counter++;
+        });
+    </script>
+</body>
+</html>

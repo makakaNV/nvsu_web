@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инд. задание 3 - Вариант 3</title>
+
+    <style>
+        p {
+            display: none;
+        }
+    </style>
+
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#button").click(function () {
+                $("p:even").fadeIn(2000);
+                $("p:odd").fadeOut(2000);
+
+                setTimeout(function () {
+                    $("p:even").fadeOut(2000);
+                    $("p:odd").fadeIn(2000);
+                }, 2000);
+            })
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <p>Paragraph 4</p>
+    <p>Paragraph 5</p>
+    <p>Paragraph 6</p>
+    <p>Paragraph 7</p>
+    <p>Paragraph 8</p>
+    <p>Paragraph 9</p>
+    <p>Paragraph 10</p>
+    <button id="button">Button</button>
+</body>
+
+</html>

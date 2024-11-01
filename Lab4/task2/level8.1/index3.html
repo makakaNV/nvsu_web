@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Номер 8.3</title>
+</head>
+<body>
+    <script>
+        const array = [
+            [2, 4, 5],
+            [1, 2, 3],
+            [0, 1, 1],
+            [5, 7, 1],
+        ];
+
+        const sortedArray = array.sort((a, b) => {
+            const sumA = a.reduce((acc, val) => acc + val, 0);
+            const sumB = b.reduce((acc, val) => acc + val, 0);
+            return sumA - sumB;
+        });
+
+        console.log(sortedArray);
+    </script>
+</body>
+</html>

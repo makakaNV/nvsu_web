@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инд. задание 4 - Вариант 3</title>
+    <style>
+        p {
+            position: relative;
+            font-size: 16pt;
+            margin-left: 60px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#button1").click(function () {
+                //нечетные визуальные параграфы, без 0 
+                $("p:nth-of-type(odd)").each(function () {
+                    oddParagraph = $(this);
+                    evenParagraph = oddParagraph.next();
+
+                    evenParagraph.text(oddParagraph.text());
+
+                    oddParagraph.animate({ left: '-40pt' }, 1000);
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="button1">Изменить параграфы</button>
+
+    <p>Параграф 1: --Нечетный--</p>
+    <p>Параграф 2: Четный</p>
+    <p>Параграф 3: --Нечетный--</p>
+    <p>Параграф 4: Четный</p>
+    <p>Параграф 5: --Нечетный--</p>
+    <p>Параграф 6: Четный</p>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 4</title>
+    <style>
+        .matrix-cell {
+            width: 50px;
+            height: 30px;
+            text-align: center;
+        }
+
+        .button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="matrix-container"></div>
+    <button class="button" onclick="sortMatrix()">Сортировка</button>
+
+    <script>
+        function createMatrix(rows, cols) {
+            let matrix = [];
+            for (let i = 0; i < rows; i++) {
+                let row = [];
+                for (let j = 0; j < cols; j++) {
+                    row.push(Math.floor(Math.random() * 100));
+                }
+                matrix.push(row);
+            }
+            return matrix;
+        }
+        function displayMatrix(matrix) {
+            container = document.getElementById('matrix-container');
+            container.innerHTML = '';
+            matrix.forEach(row => {
+                row.forEach(value => {
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.value = value;
+                    input.className = 'matrix-cell';
+                    container.appendChild(input);
+                });
+                const br = document.createElement('br');
+                container.appendChild(br);
+            });
+        }
+        function sortMatrix() {
+            const inputs = document.querySelectorAll('.matrix-cell');
+            const matrix = [];
+            let rowIndex = 0;
+            let row = [];
+
+            inputs.forEach((input, index) => {
+                row.push(parseInt(input.value));
+                if ((index + 1) % 10 === 0) {
+                    matrix.push(row);
+                    row = [];
+                }
+            });
+            matrix.forEach((row, index) => {
+                if (index % 2 === 0) {
+                    row.sort((a, b) => b - a);
+                } else {
+                    row.sort((a, b) => a - b);
+                }
+            });
+            displayMatrix(matrix);
+        }
+        const matrix = createMatrix(10, 10);
+        displayMatrix(matrix);
+    </script>
+
+</body>
+
+</html>

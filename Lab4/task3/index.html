@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3</title>
+    <style>
+        body {
+            line-height: 1.5;
+        }
+        .output {
+            margin: 20px 0 0 0;
+            padding: 10px;
+            background-color: #b5cea8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Свойства объектов</h1>
+    
+    <div class="output" id="outputWindow"></div>
+    <div class="output" id="outputDocument"></div>
+    <div class="output" id="outputLocation"></div>
+    <div class="output" id="outputNavigator"></div>
+
+    <script>
+        function printProperties(obj, elementId) {
+            outputElement = document.getElementById(elementId);
+            let output = '<strong>Свойства объекта ' + elementId + ':</strong><br>';
+            
+            for (property in obj) {
+                if (obj.hasOwnProperty(property)) {
+                    output += property + ': ' + obj[property] + '<br>';
+                }
+            }
+            
+            outputElement.innerHTML = output;
+        }
+
+        printProperties(window, 'outputWindow');
+        printProperties(document, 'outputDocument');
+        printProperties(location, 'outputLocation');
+        printProperties(navigator, 'outputNavigator');
+    </script>
+</body>
+</html>

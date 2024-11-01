@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Номер 8.4</title>
+</head>
+<body>
+    <div id="pyramid"></div>
+        
+    <script>
+        const rows = 5;
+        const pyramidContainer = document.getElementById('pyramid');
+
+        for (let i = 1; i <= rows; i++) {
+            let pyramidLine = 'x'.repeat(i);
+            let lineElement = document.createElement('div');
+            lineElement.textContent = pyramidLine;
+            pyramidContainer.appendChild(lineElement);
+        }
+    </script>
+</body>
+</html>

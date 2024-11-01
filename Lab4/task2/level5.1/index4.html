@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Номер 5.4</title>
+</head>
+<body>
+    <p class="number">2</p>
+    <p class="number">4</p>
+    <p class="number">6</p>
+
+    <script>
+        const numberParagraphs = document.querySelectorAll('.number');
+
+        numberParagraphs.forEach(paragraph => {
+            paragraph.addEventListener('click', function() {
+                number = Number(paragraph.textContent);
+                paragraph.textContent = number ** 2;
+            });
+        });
+    </script>
+</body>
+</html>
